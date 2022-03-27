@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <title>OnlyHunters</title>
+</header>
+
+<body>
+    <style>
+        @font-face {
+            font-family: bukhariScript;
+            src: url(fonts/bukhari_script.ttf);
+        }
+
+        body {
+            background-color: #000000;
+        }
+
+        h1 {
+            font-family: bukhariScript;
+            font-size: 75px;
+            color: #ff6ec7;
+            font-weight: 100;
+        }
+
+        p {
+            font-family: "calibri";
+            font-style: italic;
+            font-size: 20px;
+            color: #ff6ec7;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
+    <div>
+        <h1>0nlyHunters</h1>
+        <p>
+            The premier hunter-only ahead of the curve Horde guild on Thrall
+        </p>
+        <p>
+            Click <a target="_blank" href="https://discord.gg/tgzyWCbjpA">here</a> to join the Discord server
+        </p>
+        <p>
+            Pepper's Cuteness Count <span id="count">0</span>
+        </p>
+        <button onclick="incrementCount('count', 5)">click me</button>
+    </div>
+    <script>
+        let n = 0
+        function incrementCount(elementId, amount) {
+            n += amount
+            document.getElementById(elementId).textContent = n
+        }
+        setInterval(() => {
+            incrementCount('count', 1)
+        }, 1000)
+    </script>
+</body>
+
+</html>
