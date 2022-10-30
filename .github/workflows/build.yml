@@ -1,0 +1,14 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Build step here"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploy step here"
